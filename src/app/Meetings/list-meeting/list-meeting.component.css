@@ -1,0 +1,89 @@
+h2{
+	padding-left: 290px;
+	text-align: center;
+}
+
+   .btnAjUp{
+       
+       padding-left:285px;
+   }
+    .card {
+        border: none;
+        outline: none;
+        background-color: white;
+        border-radius: 20px;
+        transition: transform .3s;
+    }
+
+    .Detail{
+        border:white;
+        outline: none;
+        background-color: white;
+        border-radius: 20px;
+        transition: transform .3s;
+    }
+    .textMeeting{
+        text-align: left;
+        
+        
+    }
+    
+    .card:hover {
+        transform: translateY(-15px);
+        transition: transform .3s;
+    }
+
+    .text1 {
+        font-size: 13px;
+        color: brown;
+    }
+
+    .info {
+        line-height: 17px;
+    }
+
+    .cost span {
+        color: #fb3531;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .Meeting {
+        background: #dc3545;
+    }
+
+    .Meeting:hover {
+        opacity: .8;
+    }
+
+    .cursor {
+        cursor: pointer;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    .edit {
+        cursor: pointer;
+
+    }
+
+    .edit:hover {
+        color: #FFC107;
+    }
+
+    .delete {
+        cursor: pointer;
+
+    }
+
+    .delete:hover {
+        color: #F44336;
+    }
+
+    .card {
+        padding-left:130px ;
+    }
+
+    form{
+        padding-left:270px ;
+    }

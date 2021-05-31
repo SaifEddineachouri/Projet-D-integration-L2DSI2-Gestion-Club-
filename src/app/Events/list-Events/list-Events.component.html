@@ -1,0 +1,86 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Listes Des Events</title>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</head>
+
+<app-header></app-header>
+
+<body>
+  <h2> Listes Des Events</h2>
+  <br>
+  <form #f="ngForm">
+      
+      <div class="form-group col-md-6">
+          <label for="titre">Titre</label>
+          <input type="text" name="titre" class="form-control" placeholder="titre" [(ngModel)] = "selectedEvent.titre" >
+      </div>
+      <div class="form-group col-md-6">
+          <label for="Capacity">Capacité</label>
+          <input type="number"  name="Capacity" class="form-control" placeholder="Capacité" [(ngModel)] = "selectedEvent.Capacity" >
+      </div>
+      <div class="form-group col-md-6">
+          <label for="Lieu">Lieu</label>
+          <input type="text" name="Lieu" class="form-control" placeholder="lieu" [(ngModel)] = "selectedEvent.Lieu">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="Date">Date</label>
+        <input type="date" name="Date" class="form-control" [(ngModel)] = "selectedEvent.Date">
+    </div>
+      
+    
+      
+  </form>
+  <br>
+  <div class="btnAjUp">
+      <input type="button" class="btn btn-primary" value="Add Or Update  Event"
+      (click)="CreateOrUpdateEvent(f)">
+  </div>
+
+
+    <br>
+    <br> 
+
+
+
+  <div *ngFor="let Event of Events">
+  <div class="col-lg-6">
+        <div class="card card-margin">
+            <div class="card-header no-border">
+                <h5 class="card-title"><strong>{{Event.titre}}</strong></h5>
+            </div>
+            <div class="card-body pt-0">
+                <div class="widget-49">
+                      <div class="widget-49-title-wrapper">
+                          <div class="widget-49-date-success">
+                              <span class="widget-49-date-day">{{Event.id}}</span>
+                          </div>
+                          <div class="widget-49-meeting-info">
+                              <span class="widget-49-pro-title">Date :{{Event.Date}}</span>
+                              <span class="widget-49-meeting-time">Nombre De Places Disponibles :{{Event.Capacity}} Places</span>
+                          </div>
+                      </div>
+                    <ol class="widget-49-meeting-points">
+                        <li class="widget-49-meeting-item" type="none"><span><strong>Lieu :{{Event.Lieu}}</strong></span></li>
+                    </ol>
+                    <a class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip"
+                      title="Edit"
+                      (click)="selectEvent(Event)">&#xE254;</i></a>&nbsp;&nbsp;&nbsp;
+              <a class="delete" data-toggle="modal"><i class="material-icons"
+                      data-toggle="tooltip" title="Delete"
+                      (click)="deleteEvent(Event.id)">&#xE872;</i></a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</body>
+

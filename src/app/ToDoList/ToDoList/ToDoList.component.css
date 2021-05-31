@@ -1,0 +1,25 @@
+.card{
+    padding-left: 250px;
+    
+}
+
+form{
+    
+    padding-left: 250px;
+}
+h2{
+	padding-left: 290px;
+	text-align: center;
+}
+.btnAjUp{
+    padding-left: 675px;
+}
+.fa-edit{
+    cursor: pointer;
+    color : rgb(20, 205, 238);
+}
+
+.fa-trash{
+    cursor: pointer;
+    color: rgba(184, 10, 10, 0.856);
+}

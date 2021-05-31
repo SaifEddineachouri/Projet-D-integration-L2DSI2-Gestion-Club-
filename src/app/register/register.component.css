@@ -1,0 +1,14 @@
+.card {
+    background-color:#E9ECEF;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 0;
+    margin-bottom: 1rem;
+}
+.form-control {
+    
+    background: white;
+    color: #bcd0f7;
+}
+
